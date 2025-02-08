@@ -9,16 +9,40 @@
             margin: 0;
             font-family: Arial, sans-serif;
             text-align: center;
+            height: 100vh;
+            overflow: hidden;
         }
         .top-bar {
             width: 100%;
-            height: 200px;
+            height: 250px;
+            position: fixed;
+            top: 0;
+            left: 0;
             background: url('raft.png') no-repeat center center;
             background-size: cover;
         }
+        .sidebar {
+            position: fixed;
+            top: 0;
+            width: 54px;
+            height: 100%;
+            animation: rgbColor 3s infinite alternate;
+        }
+        .left {
+            left: 0;
+        }
+        .right {
+            right: 0;
+        }
+        @keyframes rgbColor {
+            0% { background-color: red; }
+            33% { background-color: green; }
+            66% { background-color: blue; }
+            100% { background-color: red; }
+        }
         .download-btn {
             display: inline-block;
-            margin-top: 50px;
+            margin-top: 300px;
             padding: 15px 30px;
             font-size: 20px;
             color: white;
@@ -33,6 +57,8 @@
 </head>
 <body>
     <div class="top-bar"></div>
+    <div class="sidebar left"></div>
+    <div class="sidebar right"></div>
     <a href="https://drive.google.com/file/d/1LEvCl-xc1aUBws-yLq5LA5_ZIh4ftcNV/view?usp=sharing" class="download-btn" download>Download File</a>
 </body>
 </html>
